@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>trabalho.dw</title>
+    <link rel="stylesheet" type="text/css" href="tri2.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <ul>
+                    <li class="nav-link">
+                        <a href="#section1"><img src="imagens/logo.jpg"></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#section2">Sobre nós</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#section3">Agências</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#section4">Pacotes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="fundo_inicial" id="section1">
+        <img src="https://www.guiadoturismobrasil.com/up/img/32321.jpg" alt="Banner">
+        <div class="texto-e-linha">
+            <div class="texto-por-cima">
+                <h1>Seu melhor</h1>
+            </div>
+            <div class="texto-por-cima2">
+                <h1>Destino</h1>
+            </div>
+            
+        </div>
+    </div>
+    <div id="section2"></div>
+    <div class="titulo">
+        <p>Sobre nós</p>
+    </div>
+    <div class="container">
+
+        <div class="texto">
+            <p>Somos um site que vai estar com você em qualquer estação do ano,
+             em qualquer feriado, em qualquer oportunidade que você tenha para dar uma escapada da sua rotina. 
+            Estaremos sempre com um destino pronto para você dar uma relaxada.</p>
+            <br>
+            <p> Seja você um amantes de viagens ou leigo que não sabe para onde quer ir, 
+                nós temos as melhores promoções e destinos para vocês todos os dias, basta seu voto de confiança e você 
+                vai voar nas diferentes oportunidades que lhe oferecemos!</p>
+        </div>
+       
+    </div>
+
+    <div class="wrapper" id="section3">
+        <div class="agencia">Principais Agências</div>
+
+    <div class="carousel-container">
+        <div class="carousel-slides">
+  
+        
+        <div class="carousel-slide">
+            <a href="https://www.trivago.com/en-US?themeId=280&sem_keyword=trivago&sem_creativeid=609767798540&sem_matchtype=e&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=&sem_param1=&sem_param2=&sem_campaignid=398320803&sem_adgroupid=121773974075&sem_targetid=kwd-5593367084&sem_location=20105&cipc=br&cip=9981900005&gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL6KN5T-TIvi0A5Qrs3rKqWHay7n0iVfeelppqGVTR3VHSCEF2W7B5hoCaiIQAvD_BwE" target="_blank">
+          <img src="imagens/trivago2.jpg" alt="Trivago">  
+            </a>
+        </div>
+        <div class="carousel-slide">
+            <a href="https://www.kayak.com.br/" target="_blank">
+          <img src="imagens/kayak.jpg" alt="Kayak"> 
+             </a>
+        </div>
+        <div class="carousel-slide">
+             <a href="https://www.booking.com/" target="_blank">
+          <img src="imagens/booking.jpg" alt="Booking"> 
+             </a>
+        </div>
+        <div class="carousel-slide">
+             <a href="https://www.airbnb.com.br/" target="_blank">
+          <img src="imagens/airbnb.jpg" alt="Airbnb">  
+             </a>
+        </div>
+    </div>
+    
+
+      
+       
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        
+        
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </div>
+    
+      
+    
+
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelector('.carousel-slides'); 
+      const totalSlides = document.querySelectorAll('.carousel-slide').length; 
+      
+      
+      function moveSlide(n) {
+        slideIndex = (slideIndex + n + totalSlides) % totalSlides; 
+        updateSlide();
+      }
+    
+      
+      function updateSlide() {
+        const offset = -slideIndex * 100; 
+        slides.style.transform = `translateX(${offset}%)`; 
+      }
+    </script>
+      
+
+
+    <div class="wrapper" id="section4">
+        <div class="card">
+            <div class="image-box">
+                <img src="imagens/disney.jpg">
+            </div>
+            <div class="content">
+                <h1>Disney, Orlando</h1>
+                <p>Venha conhecer as maravilhas deste parque mágico!
+                    Imagine você e mais 3 pessoas por uma semana no parque mais mágico de todo o mundo 
+                    com tudo incluso, parque, hotel, transporte, alimentação conheça nossas melhores ofertas.
+                    <ul>
+                        Temos pacotes que variam de:
+                        <li>R$7.000 a R$15.000 o pacote individual</li>
+                        <li>R$18.000 a R$30.000 o pacote duo</li>
+                        <li>R$35.000 a R$80.000 o pacote família, até 6 pessoas </li>
+                    </ul>
+                    Para mais informações entrar em contato
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="imagens/frança.jpg " >
+            </div>
+            <div class="content">
+                <h1>Paris, França</h1>
+                <p>Viva o charme da França em uma viagem inesquecível!
+                    A França oferece uma experiência rica em cultura, arte e gastronomia que encanta
+                     milhões de turistas todos os anos, imagine você sendo o próximo a se encantar com essas maravilhas.
+                     <ul>
+                        Sua próxima viagem pode estar mais próxima do que pensa!
+                        <li>R$10.000 pacote individual com tudo incluso</li>
+                        <li>R$30.000 a R$50.000 pacote família para em média 4/5 pessoas</li>
+                     </ul>
+                     Para mais informações entrar em contato
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="imagens/Roma.jpg">
+            </div>
+            <div class="content">
+                <h1>Roma, Itália</h1>
+                <p>Explore a roma antiga conosco!
+                    Venha vivenciar a rica história de Roma, a Cidade Eterna,
+                    uma viagem repleta de cultura, história e gastronomia única!
+                    <ul>Nunca é tarde para o seu destino dos sonhos
+                        <li>R$12.000 a R$20.000 por pessoa com tudo pago</li>
+                        <li>R$25.000 a R$50.000 de duas a três pessoas</li>
+                        <li>R$60.000 a 100.000 até 6 pessoas</li>
+                    </ul>
+                    Para mais informações entrar em contato
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="imagens/londres.jpg">>
+            </div>
+            <div class="content">
+                <h1>Londres, Inglaterra</h1>
+                <p>Descubra os encantos de Londres conosco!
+                A vibrante capital da Inglaterra, é um dos destinos mais fascinantes do mundo,
+                visite pontos icônicos como o Big Ben, o Palácio de Buckingham e a imponente
+                Tower Bridge, além de explorar museus renomados e a cultura única desta cidade.           
+                <ul>
+                    <li>R$15.000 a R$20.000 por pessoa</li>
+                    <li>R$25.00 a R$40.000 2/3 pesseas</li>
+                    <li>R$50.000 a 90.000 até 6 pessoas</li>
+                </ul>
+                Para mais informações entrar em contato
+            </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer class="footer">
+    <div class="footer">
+        <p> Instituto Federal Catarinese - 2024</p>
+        <li>Clara Paludo</li>
+        <li>1G - Técnico em Informática</li>
+    </div>
+</footer>
+
+</html>
